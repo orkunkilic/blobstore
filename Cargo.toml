@@ -1,0 +1,26 @@
+[package]
+name = "blobstore"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libp2p = { version = "0.53.2", features = [
+    "tokio",
+    "gossipsub",
+    "mdns",
+    "noise",
+    "macros",
+    "tcp",
+    "yamux",
+    "quic",
+] }
+anyhow = "1.0.79"
+bitcoin = "0.31.1"
+bitcoincore-rpc = "0.18.0"
+ord = "0.15.0"
+rocksdb = "0.21.0"
+serde = "1.0.196"
+tokio = { version = "1.36", features = ["full"] }
+bitcoin_hashes = "0.13.0"
